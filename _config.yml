@@ -1,0 +1,90 @@
+# External gems
+gems:
+  - jekyll-archives # Sorry, not GitHub pages friendly!
+  - jekyll-sitemap
+
+# Site settings
+title: Ruby is in my blood
+subtitle: "3.meals.per_day + 8.upto(10).hours.of?(Ruby).per_day == :life_is_beautiful"
+email: mehdifarsi.pro@gmail.com
+name: Mehdi FARSI
+description: > 
+  3.meals.per_day + 8.upto(10).hours.of?(Ruby).per_day  == :life_is_beautiful
+# baseurl: "/centrarium/" # the subpath of your site, e.g. /blog/
+url: http://mehdi-farsi.github.io
+# url: "http://bencentra.com" # the base hostname & protocol for your site
+cover: "assets/header_image.jpg"
+logo: "assets/logo.png"
+
+# Build settings
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+paginate: 5
+paginate_path: "/page:num/"
+
+# Archive settings (see https://github.com/jekyll/jekyll-archives/)
+jekyll-archives: 
+  enabled: 
+    - categories
+    - tags
+  layout: 'archive'
+  permalinks:
+    category: '/category/:name/'
+    tag: '/tag/:name/'
+
+# Disqus comments
+disqus_shortname: bencentra
+
+# Google analytics
+# ga_tracking_id: "UA-XXXX-1"
+
+# Social icons and sharing options
+#
+# Social settings are used in two places:
+# * In the footer, as links to your personal profiles
+# * After each blog post for sharing widgets
+# 
+# Example:
+# 
+# social:
+#   - name: Twitter                         # Name of the service
+#     icon: twitter                         # Font Awesome icon to use (minus fa- prefix)
+#     username: "@TheBenCentra"             # (User) Name to display in the footer link
+#     url: https://twitter.com/TheBenCentra # URL of your profile (leave blank to not display in footer)
+#     desc: Follow me on Twitter            # Description to display as link title, etc
+#     share_url: http://twitter.com/share   # URL for sharing to the service (leave blank to not allow sharing)
+#     share_title: ?text=                   # Title parameter for sharing URL
+#     share_link: "&amp;url="               # Link parameter for sharing URL
+social:
+  - name: Twitter
+    icon: twitter
+    username: "@farsi_mehdi"
+    url: https://twitter.com/farsi_mehdi
+    desc: Follow me on Twitter
+    share_url: http://twitter.com/share
+    share_title: ?text=
+    share_link: "&amp;url="
+
+  - name: GitHub
+    icon: github
+    username: mehdi-farsi
+    url: https://github.com/mehdi-farsi
+    desc: Fork me on GitHub
+    share_url:
+    share_title:
+    share_link:
+
+  - name: LinkedIn
+    icon: linkedin
+    username: Mehdi FARSI
+    url: https://www.linkedin.com/pub/mehdi-farsi/48/ba9/336
+    desc: Connect with me on LinkedIn
+    share_url: //www.linkedin.com/shareArticle
+    share_title: ?mini=true
+    share_link: "&amp;url="
+
+

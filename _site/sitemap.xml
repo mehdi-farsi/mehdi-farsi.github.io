@@ -1,51 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://localhost:4000/jekyll/update/2015/08/28/welcome-to-jekyll.html</loc>
-    <lastmod>2015-08-28T00:51:42+02:00</lastmod>
+    <loc>http://mehdi-farsi.github.io/2015/11/30/demystify-bitwise-operators.html</loc>
+    <lastmod>2015-11-30T00:42:00+01:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:4000/2015/08/22/extract-email-from-string-using-regex.html</loc>
+    <loc>http://mehdi-farsi.github.io/2015/08/22/extract-email-from-string-using-regex.html</loc>
     <lastmod>2015-08-22T10:43:59+02:00</lastmod>
   </url>
   <url>
-    <loc>http://localhost:4000/jekyll/2015/04/18/welcome-to-jekyll.html</loc>
-    <lastmod>2015-04-18T10:43:59+02:00</lastmod>
+    <loc>http://mehdi-farsi.github.io/about/</loc>
   </url>
   <url>
-    <loc>http://localhost:4000/dummy/2015/04/18/dummy6.html</loc>
-    <lastmod>2015-04-18T10:43:59+02:00</lastmod>
+    <loc>http://mehdi-farsi.github.io/</loc>
   </url>
   <url>
-    <loc>http://localhost:4000/dummy/2015/04/18/dummy5.html</loc>
-    <lastmod>2015-04-18T10:43:59+02:00</lastmod>
+    <loc>http://mehdi-farsi.github.io/posts/</loc>
   </url>
   <url>
-    <loc>http://localhost:4000/dummy/2015/04/18/dummy4.html</loc>
-    <lastmod>2015-04-18T10:43:59+02:00</lastmod>
+    <loc>http://mehdi-farsi.github.io/typography/</loc>
   </url>
   <url>
-    <loc>http://localhost:4000/dummy/2015/04/18/dummy3.html</loc>
-    <lastmod>2015-04-18T10:43:59+02:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:4000/dummy/2015/04/18/dummy2.html</loc>
-    <lastmod>2015-04-18T10:43:59+02:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:4000/dummy/2015/04/18/dummy.html</loc>
-    <lastmod>2015-04-18T10:43:59+02:00</lastmod>
-  </url>
-  <url>
-    <loc>http://localhost:4000/about/</loc>
-  </url>
-  <url>
-    <loc>http://localhost:4000/</loc>
-  </url>
-  <url>
-    <loc>http://localhost:4000/posts/</loc>
-  </url>
-  <url>
-    <loc>http://localhost:4000/typography/</loc>
+    <loc>http://mehdi-farsi.github.io/tricks/extract-an-email-from-string-using-regex.html</loc>
+    <lastmod>2015-11-29T15:24:35+01:00</lastmod>
   </url>
 </urlset>

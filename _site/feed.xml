@@ -4,37 +4,46 @@
     <title>Ruby is in my blood</title>
     <description>3.meals.per_day + 8.upto(10).hours.of?(Ruby).per_day  == :life_is_beautiful
 </description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 27 Aug 2015 23:56:08 +0200</pubDate>
-    <lastBuildDate>Thu, 27 Aug 2015 23:56:08 +0200</lastBuildDate>
+    <link>http://mehdi-farsi.github.io/</link>
+    <atom:link href="http://mehdi-farsi.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 29 Nov 2015 23:56:14 +0100</pubDate>
+    <lastBuildDate>Sun, 29 Nov 2015 23:56:14 +0100</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve --watch&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+        <title>Demystify Bitwise Operators</title>
+        <description>&lt;h2 id=&quot;demystify-bitwise-operators&quot;&gt;Demystify Bitwise Operators&lt;/h2&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;The purpose of this code snippet is to play (by using as simple as possible examples) with bitwise operators in &lt;code class=&quot;highlighter-rouge&quot;&gt;Ruby&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;p&gt;The method &lt;a href=&quot;http://ruby-doc.org/core-2.2.0/Fixnum.html#method-i-to_s&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Fixnum#to_s&lt;/code&gt;&lt;/a&gt; takes an argument which define the base of the displayed Integer.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; &quot;00000011&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This is helpful for displaying the result of the bitwise operations in base 2.&lt;/p&gt;
 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;         &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; &quot;00001000&quot;&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;         &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; &quot;00000110&quot;&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;         &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; &quot;00000010&quot;&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;         &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; &quot;00000001&quot;&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; &quot;00000000&quot; because it applies an AND operation on each bit. (1 &amp;amp; 1) match&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; &quot;00000011&quot; because it applies an OR  operation on each bit. (1 | 1), (1 | 0), (0 | 1) match !&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; &quot;00000100&quot; because it applies a XOR operation on each bit.  (1 | 0), (0 | 1) match !&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; &quot;00000010&quot; right-shift operator. Each bit is shifted 2 bits to the right.&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; &quot;00001000&quot; left-shift operator.  Each bit is shifted 2 bits to the left.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I’m pretty sure that after few minutes and a little headache, this will be pretty obvious for you !&lt;br /&gt;
+&amp;lt;/center&amp;gt;&lt;/p&gt;
 </description>
-        <pubDate>Fri, 28 Aug 2015 00:51:42 +0200</pubDate>
-        <link>http://localhost:4000/jekyll/update/2015/08/28/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://localhost:4000/jekyll/update/2015/08/28/welcome-to-jekyll.html</guid>
+        <pubDate>Mon, 30 Nov 2015 00:42:00 +0100</pubDate>
+        <link>http://mehdi-farsi.github.io/2015/11/30/demystify-bitwise-operators.html</link>
+        <guid isPermaLink="true">http://mehdi-farsi.github.io/2015/11/30/demystify-bitwise-operators.html</guid>
         
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
         
       </item>
     
@@ -54,190 +63,9 @@
 &lt;p&gt;You can extract whatever you want by changing the Regex. :)&lt;/p&gt;
 </description>
         <pubDate>Sat, 22 Aug 2015 10:43:59 +0200</pubDate>
-        <link>http://localhost:4000/2015/08/22/extract-email-from-string-using-regex.html</link>
-        <guid isPermaLink="true">http://localhost:4000/2015/08/22/extract-email-from-string-using-regex.html</guid>
+        <link>http://mehdi-farsi.github.io/2015/08/22/extract-email-from-string-using-regex.html</link>
+        <guid isPermaLink="true">http://mehdi-farsi.github.io/2015/08/22/extract-email-from-string-using-regex.html</guid>
         
-        
-      </item>
-    
-      <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;h2 id=&quot;adding-new-posts&quot;&gt;Adding New Posts&lt;/h2&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;h3 id=&quot;tags-and-categories&quot;&gt;Tags and Categories&lt;/h3&gt;
-
-&lt;p&gt;If you list one or more categories or tags in the front matter of your post, they will be included with the post on the page as links. Clicking the link will bring you to an auto-generated archive page for the category or tag, created using the &lt;a href=&quot;https://github.com/jekyll/jekyll-archives&quot;&gt;jekyll-archive&lt;/a&gt; gem.&lt;/p&gt;
-
-&lt;h3 id=&quot;cover-images&quot;&gt;Cover Images&lt;/h3&gt;
-
-&lt;p&gt;To add a cover image to your post, set the “cover” property in the front matter with the relative URL of the image (i.e. &lt;code&gt;cover: &quot;assets/cover_image.jpg&quot;&lt;/code&gt;). &lt;/p&gt;
-
-&lt;h3 id=&quot;code-snippets&quot;&gt;Code Snippets&lt;/h3&gt;
-
-&lt;p&gt;You can use &lt;a href=&quot;https://highlightjs.org/&quot;&gt;highlight.js&lt;/a&gt; to add syntax highlig code snippets:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;hljs javascript&quot;&gt;function demo(string, times) {
-  for (var i = 0; i &amp;lt; times; i++) {
-    console.log(string);
-  }
-}
-demo(&quot;hello, world!&quot;, 10);&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&quot;images&quot;&gt;Images&lt;/h3&gt;
-
-&lt;p&gt;Lightbox has been enabled for images. To create the link that’ll launch the lightbox, add &lt;code&gt;data-lightbox&lt;/code&gt; and &lt;code&gt;data-title&lt;/code&gt; attributes to an &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; tag around your &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; tag. The result is:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;//bencentra.com/assets/images/falcon9_large.jpg&quot; data-lightbox=&quot;falcon9-large&quot; data-title=&quot;Check out the Falcon 9 from SpaceX&quot;&gt;
-  &lt;img src=&quot;//bencentra.com/assets/images/falcon9_small.jpg&quot; title=&quot;Check out the Falcon 9 from SpaceX&quot; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;For more information, check out the &lt;a href=&quot;http://lokeshdhakar.com/projects/lightbox2/&quot;&gt;Lightbox&lt;/a&gt; website.&lt;/p&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://github.com/jekyll/jekyll-help&quot;&gt;Jekyll’s dedicated Help repository&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Sat, 18 Apr 2015 10:43:59 +0200</pubDate>
-        <link>http://localhost:4000/jekyll/2015/04/18/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://localhost:4000/jekyll/2015/04/18/welcome-to-jekyll.html</guid>
-        
-        <category>jekyll</category>
-        
-        <category>welcome</category>
-        
-        
-        <category>jekyll</category>
-        
-      </item>
-    
-      <item>
-        <title>Dummy Post 6</title>
-        <description>&lt;p&gt;This is just a dummy post. Lorem ipsum and all the rest.&lt;/p&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod&lt;br /&gt;
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,&lt;br /&gt;
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo&lt;br /&gt;
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse&lt;br /&gt;
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non&lt;br /&gt;
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 18 Apr 2015 10:43:59 +0200</pubDate>
-        <link>http://localhost:4000/dummy/2015/04/18/dummy6.html</link>
-        <guid isPermaLink="true">http://localhost:4000/dummy/2015/04/18/dummy6.html</guid>
-        
-        <category>lorem</category>
-        
-        <category>ipsum</category>
-        
-        
-        <category>dummy</category>
-        
-      </item>
-    
-      <item>
-        <title>Dummy Post 5</title>
-        <description>&lt;p&gt;This is just a dummy post. Lorem ipsum and all the rest.&lt;/p&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod&lt;br /&gt;
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,&lt;br /&gt;
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo&lt;br /&gt;
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse&lt;br /&gt;
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non&lt;br /&gt;
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 18 Apr 2015 10:43:59 +0200</pubDate>
-        <link>http://localhost:4000/dummy/2015/04/18/dummy5.html</link>
-        <guid isPermaLink="true">http://localhost:4000/dummy/2015/04/18/dummy5.html</guid>
-        
-        <category>lorem</category>
-        
-        
-        <category>dummy</category>
-        
-      </item>
-    
-      <item>
-        <title>Dummy Post 4</title>
-        <description>&lt;p&gt;This is just a dummy post. Lorem ipsum and all the rest.&lt;/p&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod&lt;br /&gt;
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,&lt;br /&gt;
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo&lt;br /&gt;
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse&lt;br /&gt;
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non&lt;br /&gt;
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 18 Apr 2015 10:43:59 +0200</pubDate>
-        <link>http://localhost:4000/dummy/2015/04/18/dummy4.html</link>
-        <guid isPermaLink="true">http://localhost:4000/dummy/2015/04/18/dummy4.html</guid>
-        
-        <category>ipsum</category>
-        
-        
-        <category>dummy</category>
-        
-      </item>
-    
-      <item>
-        <title>Dummy Post 3</title>
-        <description>&lt;p&gt;This is just a dummy post. Lorem ipsum and all the rest.&lt;/p&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod&lt;br /&gt;
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,&lt;br /&gt;
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo&lt;br /&gt;
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse&lt;br /&gt;
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non&lt;br /&gt;
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 18 Apr 2015 10:43:59 +0200</pubDate>
-        <link>http://localhost:4000/dummy/2015/04/18/dummy3.html</link>
-        <guid isPermaLink="true">http://localhost:4000/dummy/2015/04/18/dummy3.html</guid>
-        
-        
-        <category>dummy</category>
-        
-      </item>
-    
-      <item>
-        <title>Dummy Post 2</title>
-        <description>&lt;p&gt;This is just a dummy post. Lorem ipsum and all the rest.&lt;/p&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod&lt;br /&gt;
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,&lt;br /&gt;
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo&lt;br /&gt;
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse&lt;br /&gt;
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non&lt;br /&gt;
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 18 Apr 2015 10:43:59 +0200</pubDate>
-        <link>http://localhost:4000/dummy/2015/04/18/dummy2.html</link>
-        <guid isPermaLink="true">http://localhost:4000/dummy/2015/04/18/dummy2.html</guid>
-        
-        
-        <category>dummy</category>
-        
-      </item>
-    
-      <item>
-        <title>Dummy Post</title>
-        <description>&lt;p&gt;This is just a dummy post. Lorem ipsum and all the rest.&lt;/p&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod&lt;br /&gt;
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,&lt;br /&gt;
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo&lt;br /&gt;
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse&lt;br /&gt;
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non&lt;br /&gt;
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 18 Apr 2015 10:43:59 +0200</pubDate>
-        <link>http://localhost:4000/dummy/2015/04/18/dummy.html</link>
-        <guid isPermaLink="true">http://localhost:4000/dummy/2015/04/18/dummy.html</guid>
-        
-        
-        <category>dummy</category>
         
       </item>
     

@@ -47,6 +47,11 @@
     padding-left: 10px;
     padding-right: 20px;
   }
+  .highlighter-rouge {
+    font-size: 0.9em;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
   </style>
 </head>
 
@@ -69,9 +74,9 @@
     <div class="page-content">
         <h2 id="demystify-bitwise-operators">Demystify Bitwise Operators</h2>
 
-<p>The purpose of this code snippet is to play (by using as simple as possible examples) with bitwise operators in <code class="highlighter-rouge">Ruby</code>.</p>
+<p>The purpose of this code snippet is to play (by using simple examples) with bitwise operators in Ruby.</p>
 
-<p>The method <a href="http://ruby-doc.org/core-2.2.0/Fixnum.html#method-i-to_s"><code class="highlighter-rouge">Fixnum#to_s</code></a> takes an argument which define the base of the displayed Integer.</p>
+<p>The method <a href="http://ruby-doc.org/core-2.2.0/Fixnum.html#method-i-to_s"><code class="highlighter-rouge">Fixnum#to_s</code></a> takes an argument which defines the base of the displayed number.</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code><span class="mi">3</span><span class="p">.</span><span class="nf">to_s</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="c1"># =&gt; "00000011"</span>
 </code></pre>
@@ -85,8 +90,8 @@
 <span class="mi">1</span><span class="p">.</span><span class="nf">to_s</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>         <span class="c1"># =&gt; "00000001"</span>
 
 <span class="p">(</span><span class="mi">2</span> <span class="o">&amp;</span> <span class="mi">1</span><span class="p">).</span><span class="nf">to_s</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>   <span class="c1"># =&gt; "00000000" because it applies an AND operation on each bit. (1 &amp; 1) match</span>
-<span class="p">(</span><span class="mi">2</span> <span class="o">|</span> <span class="mi">1</span><span class="p">).</span><span class="nf">to_s</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>   <span class="c1"># =&gt; "00000011" because it applies an OR  operation on each bit. (1 | 1), (1 | 0), (0 | 1) match !</span>
-<span class="p">(</span><span class="mi">6</span> <span class="o">^</span> <span class="mi">2</span><span class="p">).</span><span class="nf">to_s</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>   <span class="c1"># =&gt; "00000100" because it applies a XOR operation on each bit.  (1 | 0), (0 | 1) match !</span>
+<span class="p">(</span><span class="mi">2</span> <span class="o">|</span> <span class="mi">1</span><span class="p">).</span><span class="nf">to_s</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>   <span class="c1"># =&gt; "00000011" because it applies an OR  operation on each bit. (1 | 1), (1 | 0), (0 | 1) match</span>
+<span class="p">(</span><span class="mi">6</span> <span class="o">^</span> <span class="mi">2</span><span class="p">).</span><span class="nf">to_s</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>   <span class="c1"># =&gt; "00000100" because it applies a XOR operation on each bit.  (1 | 0), (0 | 1) match</span>
 <span class="p">(</span><span class="mi">8</span> <span class="o">&gt;&gt;</span> <span class="mi">2</span><span class="p">).</span><span class="nf">to_s</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># =&gt; "00000010" right-shift operator. Each bit is shifted 2 bits to the right.</span>
 <span class="p">(</span><span class="mi">2</span> <span class="o">&lt;&lt;</span> <span class="mi">2</span><span class="p">).</span><span class="nf">to_s</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>  <span class="c1"># =&gt; "00001000" left-shift operator.  Each bit is shifted 2 bits to the left.</span>
 </code></pre>

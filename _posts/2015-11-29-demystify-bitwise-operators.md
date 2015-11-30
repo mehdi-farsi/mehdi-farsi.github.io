@@ -9,10 +9,10 @@ author: Mehdi FARSI
 
 
 
-  The purpose of this code snippet is to play (by using as simple as possible examples) with bitwise operators in `Ruby`.
+The purpose of this code snippet is to play (by using simple examples) with bitwise operators in Ruby.
 
 
-  The method [`Fixnum#to_s`](http://ruby-doc.org/core-2.2.0/Fixnum.html#method-i-to_s) takes an argument which define the base of the displayed Integer.
+  The method [`Fixnum#to_s`](http://ruby-doc.org/core-2.2.0/Fixnum.html#method-i-to_s) takes an argument which defines the base of the displayed number.
 
 ```ruby
 3.to_s(2) # => "00000011"
@@ -27,8 +27,8 @@ This is helpful for displaying the result of the bitwise operations in base 2.
 1.to_s(2)         # => "00000001"
 
 (2 & 1).to_s(2)   # => "00000000" because it applies an AND operation on each bit. (1 & 1) match
-(2 | 1).to_s(2)   # => "00000011" because it applies an OR  operation on each bit. (1 | 1), (1 | 0), (0 | 1) match !
-(6 ^ 2).to_s(2)   # => "00000100" because it applies a XOR operation on each bit.  (1 | 0), (0 | 1) match !
+(2 | 1).to_s(2)   # => "00000011" because it applies an OR  operation on each bit. (1 | 1), (1 | 0), (0 | 1) match
+(6 ^ 2).to_s(2)   # => "00000100" because it applies a XOR operation on each bit.  (1 | 0), (0 | 1) match
 (8 >> 2).to_s(2)  # => "00000010" right-shift operator. Each bit is shifted 2 bits to the right.
 (2 << 2).to_s(2)  # => "00001000" left-shift operator.  Each bit is shifted 2 bits to the left.
 ```

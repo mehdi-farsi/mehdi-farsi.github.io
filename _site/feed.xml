@@ -6,17 +6,17 @@
 </description>
     <link>http://mehdi-farsi.github.io/</link>
     <atom:link href="http://mehdi-farsi.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 29 Nov 2015 23:56:14 +0100</pubDate>
-    <lastBuildDate>Sun, 29 Nov 2015 23:56:14 +0100</lastBuildDate>
+    <pubDate>Mon, 30 Nov 2015 06:34:41 +0100</pubDate>
+    <lastBuildDate>Mon, 30 Nov 2015 06:34:41 +0100</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
         <title>Demystify Bitwise Operators</title>
         <description>&lt;h2 id=&quot;demystify-bitwise-operators&quot;&gt;Demystify Bitwise Operators&lt;/h2&gt;
 
-&lt;p&gt;The purpose of this code snippet is to play (by using as simple as possible examples) with bitwise operators in &lt;code class=&quot;highlighter-rouge&quot;&gt;Ruby&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The purpose of this code snippet is to play (by using simple examples) with bitwise operators in Ruby.&lt;/p&gt;
 
-&lt;p&gt;The method &lt;a href=&quot;http://ruby-doc.org/core-2.2.0/Fixnum.html#method-i-to_s&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Fixnum#to_s&lt;/code&gt;&lt;/a&gt; takes an argument which define the base of the displayed Integer.&lt;/p&gt;
+&lt;p&gt;The method &lt;a href=&quot;http://ruby-doc.org/core-2.2.0/Fixnum.html#method-i-to_s&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Fixnum#to_s&lt;/code&gt;&lt;/a&gt; takes an argument which defines the base of the displayed number.&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; &quot;00000011&quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
@@ -30,8 +30,8 @@
 &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;         &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; &quot;00000001&quot;&lt;/span&gt;
 
 &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; &quot;00000000&quot; because it applies an AND operation on each bit. (1 &amp;amp; 1) match&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; &quot;00000011&quot; because it applies an OR  operation on each bit. (1 | 1), (1 | 0), (0 | 1) match !&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; &quot;00000100&quot; because it applies a XOR operation on each bit.  (1 | 0), (0 | 1) match !&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; &quot;00000011&quot; because it applies an OR  operation on each bit. (1 | 1), (1 | 0), (0 | 1) match&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;^&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; &quot;00000100&quot; because it applies a XOR operation on each bit.  (1 | 0), (0 | 1) match&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; &quot;00000010&quot; right-shift operator. Each bit is shifted 2 bits to the right.&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; &quot;00001000&quot; left-shift operator.  Each bit is shifted 2 bits to the left.&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;

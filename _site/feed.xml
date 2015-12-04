@@ -6,9 +6,92 @@
 </description>
     <link>http://mehdi-farsi.github.io/</link>
     <atom:link href="http://mehdi-farsi.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 30 Nov 2015 06:34:41 +0100</pubDate>
-    <lastBuildDate>Mon, 30 Nov 2015 06:34:41 +0100</lastBuildDate>
+    <pubDate>Fri, 04 Dec 2015 09:25:46 +0100</pubDate>
+    <lastBuildDate>Fri, 04 Dec 2015 09:25:46 +0100</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Case statement Behind The Scene</title>
+        <description>&lt;h1 id=&quot;case-statement-behind-the-scene&quot;&gt;Case statement Behind The Scene&lt;/h1&gt;
+
+&lt;h3 id=&quot;syntax&quot;&gt;Syntax&lt;/h3&gt;
+
+&lt;p&gt;A &lt;code class=&quot;highlighter-rouge&quot;&gt;case&lt;/code&gt; statement consists of an optional condition followed by zero or more &lt;code class=&quot;highlighter-rouge&quot;&gt;when&lt;/code&gt; conditions.&lt;br /&gt;
+It returns the value of the first truthy &lt;code class=&quot;highlighter-rouge&quot;&gt;when&lt;/code&gt; statement. Otherwise &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;match&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;match&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;I match !&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# =&amp;gt; str = &quot;I match !&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;lolcat&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;not match&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;lolcat&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# =&amp;gt; str = nil&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;determine-case-equality&quot;&gt;Determine case equality&lt;/h3&gt;
+
+&lt;p&gt;Case equality is determined by the &lt;code class=&quot;highlighter-rouge&quot;&gt;===&lt;/code&gt; (threequal) operator.&lt;br /&gt;
+The left operand is always the statement of the &lt;code class=&quot;highlighter-rouge&quot;&gt;when&lt;/code&gt; clause.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;lolcat&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;I&#39;m a String&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Fixnum&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;I&#39;m a Fixnum&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Range&lt;/span&gt;  &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;I&#39;m a Range&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Equivalent to:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;lolcat&quot;&lt;/span&gt;
+  &lt;span class=&quot;s2&quot;&gt;&quot;I&#39;m a String&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;elsif&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Fixnum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;lolcat&quot;&lt;/span&gt;
+  &lt;span class=&quot;s2&quot;&gt;&quot;I&#39;m a Fixnum&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;elsif&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Range&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;lolcat&quot;&lt;/span&gt;
+  &lt;span class=&quot;s2&quot;&gt;&quot;I&#39;m a Range&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;multiple-statements&quot;&gt;Multiple statements&lt;/h3&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;when&lt;/code&gt; clause accepts multiple statements.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;lolcat&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;I&#39;m a string&quot;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Equivalent to:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;lolcat&quot;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;I&#39;m a string&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;lolcat&quot;&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Each statement is separated by an &lt;code class=&quot;highlighter-rouge&quot;&gt;or&lt;/code&gt; operator.&lt;/p&gt;
+
+&lt;p&gt;Voilà !&lt;/p&gt;
+
+&lt;h5 id=&quot;related-links&quot;&gt;Related Links&lt;/h5&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://ruby-doc.org/docs/keywords/1.9/Object.html#method-i-case&quot;&gt;http://ruby-doc.org/docs/keywords/1.9/Object.html#method-i-case&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 05 Dec 2015 00:42:00 +0100</pubDate>
+        <link>http://mehdi-farsi.github.io/2015/12/05/case-behind-the-scene.html</link>
+        <guid isPermaLink="true">http://mehdi-farsi.github.io/2015/12/05/case-behind-the-scene.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Demystify Bitwise Operators</title>

@@ -6,9 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Ruby is in my blood</title>
-  <meta name="description" content="3.meals.per_day + 8.upto(10).hours.of?(Ruby).per_day  == :life_is_beautiful
-">
+  <title>Case statement Behind The Scene</title>
+  <meta name="description" content="Case statement Behind The Scene">
 
   <!-- External libraries -->
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -38,7 +37,7 @@
 
 	<!-- Site styles -->
   <link rel="stylesheet" href="http://mehdi-farsi.github.io/css/main.css">
-  <link rel="canonical" href="http://mehdi-farsi.github.io/">
+  <link rel="canonical" href="http://mehdi-farsi.github.io/2015/12/05/case-behind-the-scene.html">
   <link rel="alternate" type="application/rss+xml" title="Ruby is in my blood" href="http://mehdi-farsi.github.io/feed.xml" />
   <style type="text/css">
   p, h1, h2, h3, h4, h5 {
@@ -73,97 +72,79 @@
 
 
     <div class="page-content">
-        <div class="home">
+        <h1 id="case-statement-behind-the-scene">Case statement Behind The Scene</h1>
 
-<div class="site-header-container has-cover" style="background-image: url(assets/header_image.jpg);">
-	<div class="scrim has-cover">
-		<header class="site-header">
-		  <h1 class="title">Ruby is in my blood</h1>
-		  <p class="subtitle">3.meals.per_day + 8.upto(10).hours.of?(Ruby).per_day == :life_is_beautiful</p>
-		</header>
-	</div>
+<h3 id="syntax">Syntax</h3>
+
+<p>A <code class="highlighter-rouge">case</code> statement consists of an optional condition followed by zero or more <code class="highlighter-rouge">when</code> conditions.<br />
+It returns the value of the first truthy <code class="highlighter-rouge">when</code> statement. Otherwise <code class="highlighter-rouge">nil</code>.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">str</span> <span class="o">=</span> <span class="k">case</span> <span class="s2">"match"</span>
+<span class="k">when</span> <span class="s2">"match"</span> <span class="k">then</span> <span class="s2">"I match !"</span>
+<span class="k">end</span>
+
+<span class="c1"># =&gt; str = "I match !"</span>
+</code></pre>
 </div>
 
-<div class="wrapper">
-<ul class="post-list">
-  
-  <li>
-    <h2>
-      <a class="post-link" href="2015/12/05/case-behind-the-scene.html">Case statement Behind The Scene</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>Case statement Behind The Scene Syntax A case statement consists of an optional condition followed by zero or more when conditions. It returns the value of the first truthy when statement. Otherwise nil. str = case "match" when "match" then "I match !" end # =&gt; str = "I match...</p>
-    </section>
-    <section class="post-meta">
-    	<div class="post-date">December 5, 2015</div>
-    	<div class="post-categories">
-    	in 
-    	</div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="2015/11/30/demystify-bitwise-operators.html">Demystify Bitwise Operators</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>Demystify Bitwise Operators The purpose of this code snippet is to play (by using simple examples) with bitwise operators in Ruby. The method Fixnum#to_s takes an argument which defines the base of the displayed number. 3.to_s(2) # =&gt; "00000011" This is helpful for displaying the result of the bitwise operations...</p>
-    </section>
-    <section class="post-meta">
-    	<div class="post-date">November 30, 2015</div>
-    	<div class="post-categories">
-    	in 
-    	</div>
-    </section>
-  </li>
-  
-  <hr>
-  
-  
-  <li>
-    <h2>
-      <a class="post-link" href="2015/08/22/extract-email-from-string-using-regex.html">Extract email from string using REGEX</a>
-    </h2>
-    <section class="post-excerpt" itemprop="description">
-      <p>Extract email from string using REGEX The goal of this code snippet isn’t to make an email validator. So the REGEX is not steady but works for the most common cases. line = "Congratulation ! here is your email : mehdi-farsi@long-and_boring-company_name.com. Are you happy ?" email = line[/(\w|[\.\-])+@(\w|[\.\-])+\.[a-zA-Z]+/] You can...</p>
-    </section>
-    <section class="post-meta">
-    	<div class="post-date">August 22, 2015</div>
-    	<div class="post-categories">
-    	in 
-    	</div>
-    </section>
-  </li>
-  
-  
-</ul>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">str</span> <span class="o">=</span> <span class="k">case</span> <span class="s2">"lolcat"</span>
+<span class="k">when</span> <span class="s2">"not match"</span> <span class="k">then</span> <span class="s2">"lolcat"</span>
+<span class="k">end</span>
 
-<nav class="pagination" role="navigation">
-	<p>
-    
-    <span class="fa-stack fa-lg">
-			<i class="fa fa-square fa-stack-2x"></i>
-			<i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
-		</span>
-    
-    <span class="page-number">Page 1 of 1</span>
-    
-    <span class="fa-stack fa-lg">
-		  <i class="fa fa-square fa-stack-2x"></i>
-		  <i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
-		</span>
-    
-  </p>
-  <p>
-    <a href="posts">View All Posts by Category</a>
-  </p>
-</nav>
+<span class="c1"># =&gt; str = nil</span>
+</code></pre>
+</div>
 
+<h3 id="determine-case-equality">Determine case equality</h3>
+
+<p>Case equality is determined by the <code class="highlighter-rouge">===</code> (threequal) operator.<br />
+The left operand is always the statement of the <code class="highlighter-rouge">when</code> clause.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">case</span> <span class="s2">"lolcat"</span>
+<span class="k">when</span> <span class="no">String</span> <span class="k">then</span> <span class="s2">"I'm a String"</span>
+<span class="k">when</span> <span class="no">Fixnum</span> <span class="k">then</span> <span class="s2">"I'm a Fixnum"</span>
+<span class="k">when</span> <span class="no">Range</span>  <span class="k">then</span> <span class="s2">"I'm a Range"</span>
+<span class="k">end</span>
+</code></pre>
 </div>
+
+<p>Equivalent to:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">if</span> <span class="no">String</span> <span class="o">===</span> <span class="s2">"lolcat"</span>
+  <span class="s2">"I'm a String"</span>
+<span class="k">elsif</span> <span class="no">Fixnum</span> <span class="o">===</span> <span class="s2">"lolcat"</span>
+  <span class="s2">"I'm a Fixnum"</span>
+<span class="k">elsif</span> <span class="no">Range</span> <span class="o">===</span> <span class="s2">"lolcat"</span>
+  <span class="s2">"I'm a Range"</span>
+<span class="k">end</span>
+</code></pre>
 </div>
+
+<h3 id="multiple-statements">Multiple statements</h3>
+
+<p>The <code class="highlighter-rouge">when</code> clause accepts multiple statements.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">case</span> <span class="s2">"lolcat"</span>
+<span class="k">when</span> <span class="no">String</span><span class="p">,</span> <span class="s2">"I'm a string"</span> <span class="k">then</span> <span class="kp">true</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<p>Equivalent to:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">if</span> <span class="no">String</span> <span class="o">===</span> <span class="s2">"lolcat"</span> <span class="n">or</span> <span class="s2">"I'm a string"</span> <span class="o">===</span> <span class="s2">"lolcat"</span>
+  <span class="kp">true</span>
+<span class="k">end</span>
+</code></pre>
+</div>
+
+<p>Each statement is separated by an <code class="highlighter-rouge">or</code> operator.</p>
+
+<p>Voilà !</p>
+
+<h5 id="related-links">Related Links</h5>
+
+<p><a href="http://ruby-doc.org/docs/keywords/1.9/Object.html#method-i-case">http://ruby-doc.org/docs/keywords/1.9/Object.html#method-i-case</a></p>
 
     </div>
 

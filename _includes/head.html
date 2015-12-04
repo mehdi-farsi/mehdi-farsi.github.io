@@ -40,11 +40,18 @@
   p, h1, h2, h3, h4, h5 {
     padding-left: 20px;
   }
-  div,pre,code {
+  div,pre, pre code {
     padding-left: 10px;
     padding-right: 20px;
   }
-  .highlighter-rouge {
+
+  body > div.page-content > p > code {
+    font-size: 0.9em;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  .highlighter-rouge, code {
     font-size: 0.9em;
     padding-right: 5px;
     padding-left: 5px;

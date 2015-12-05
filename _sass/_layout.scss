@@ -117,15 +117,9 @@ pre code.hljs {
       display: none;
     }
   }
-  // Nav menu
-  .navigation-wrapper {
-  	@include outer-container;
-    @include clearfix;
-    position: relative;
-  }
   .logo {
     float: left;
-    height: 4em;
+    height: 2em;
     @include media ($tablet) {
     	padding-left: $em-base;
     }

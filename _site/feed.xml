@@ -6,9 +6,100 @@
 </description>
     <link>http://mehdi-farsi.github.io/</link>
     <atom:link href="http://mehdi-farsi.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+<<<<<<< Updated upstream
     <pubDate>Sat, 05 Dec 2015 11:29:05 +0100</pubDate>
     <lastBuildDate>Sat, 05 Dec 2015 11:29:05 +0100</lastBuildDate>
+=======
+    <pubDate>Thu, 24 Dec 2015 17:05:08 +0100</pubDate>
+    <lastBuildDate>Thu, 24 Dec 2015 17:05:08 +0100</lastBuildDate>
+>>>>>>> Stashed changes
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Did you say HEREDOC ?</title>
+        <description>&lt;h2 id=&quot;did-you-say-heredoc-&quot;&gt;Did You Say HEREDOC ?&lt;/h2&gt;
+
+&lt;p&gt;The purpose of this code snippet is to play (by using simple examples) with the HEREDOC syntax in Ruby.&lt;/p&gt;
+
+&lt;p&gt;An HEREDOC permits to group a multiline string by scoping it using a spicy syntax&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EOF&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt;
+Leonardo: I&#39;m the master of the world !
+Me: No you&#39;re dead bro..
+&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EOF&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;By default, an HEREDOC enables &lt;code class=&quot;highlighter-rouge&quot;&gt;String&lt;/code&gt; interpolation (as double-quoted string)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;venue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;world&quot;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EOF&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt;
+Leonardo: I am the master of the &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;venue&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt; !&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt;
+Me: No you are dead bro..
+&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EOF&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Output:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;?&amp;gt; &lt;/span&gt;ruby heredoc.rb
+Leonardo: I am the master of the world !
+
+Me: No you are dead bro..
+&lt;span class=&quot;gp&quot;&gt;?&amp;gt; &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;To disable interpolation (as single-quoted string)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;venue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;world&quot;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;&#39;EOF&#39;&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt;
+Leonardo: I am the master of the &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;venue&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt; !&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt;
+Me: No you are dead bro..
+&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;EOF&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Output:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;gp&quot;&gt;?&amp;gt; &lt;/span&gt;ruby heredoc.rb
+Leonardo: I am the master of the &lt;span class=&quot;c&quot;&gt;#{venue} !\n&lt;/span&gt;
+Me: No you are dead bro..
+&lt;span class=&quot;gp&quot;&gt;?&amp;gt; &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Some text editors understand heredocs and pretty print the string depending on the heredoc flag.&lt;br /&gt;&lt;br /&gt;
+List of common heredoc flags: «-SQL, «-HTML, «-XML, «-JSON&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;-&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;SQL&lt;/span&gt;&lt;span class=&quot;sh&quot;&gt;
+SELECT id
+FROM table
+WHERE
+clause1 AND
+clause2
+ORDER BY
+id DESC;
+&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;SQL&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;for further information: &lt;a href=&quot;http://makandracards.com/makandra/1675-using-heredoc-for-prettier-ruby-code&quot;&gt;Using heredoc for prettier Ruby code&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Voilà !&lt;/p&gt;
+</description>
+        <pubDate>Fri, 25 Dec 2015 00:42:00 +0100</pubDate>
+        <link>http://mehdi-farsi.github.io/2015/12/25/did-you-say-heredoc.html</link>
+        <guid isPermaLink="true">http://mehdi-farsi.github.io/2015/12/25/did-you-say-heredoc.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Case statement Behind The Scene</title>
@@ -120,8 +211,7 @@ The left operand is always the statement of the &lt;code class=&quot;highlighter
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;I’m pretty sure that after few minutes and a little headache, this will be pretty obvious for you !&lt;br /&gt;
-&amp;lt;/center&amp;gt;&lt;/p&gt;
+&lt;p&gt;I’m pretty sure that after few minutes and a little headache, this will be pretty obvious for you !&lt;/p&gt;
 </description>
         <pubDate>Mon, 30 Nov 2015 00:42:00 +0100</pubDate>
         <link>http://mehdi-farsi.github.io/2015/11/30/demystify-bitwise-operators.html</link>

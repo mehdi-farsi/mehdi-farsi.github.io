@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Did you say HEREDOC ?</title>
+  <meta name="description" content="Did You Say HEREDOC ?">
+
+  <!-- External libraries -->
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/monokai_sublime.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
+
+  <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
+  <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/icons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="assets/icons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="assets/icons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/icons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="assets/icons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="assets/icons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="assets/icons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="assets/icons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="assets/icons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/icons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+	<link rel="manifest" href="assets/icons/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="assets/icons/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<!-- Site styles -->
+  <link rel="stylesheet" href="http://mehdi-farsi.github.io/css/main.css">
+  <link rel="canonical" href="http://mehdi-farsi.github.io/2015/12/25/did-you-say-heredoc.html">
+  <link rel="alternate" type="application/rss+xml" title="Ruby is in my blood" href="http://mehdi-farsi.github.io/feed.xml" />
+  <style type="text/css">
+  p, h1, h2, h3, h4, h5 {
+    padding-left: 20px;
+  }
+  div,pre, pre code {
+    padding-left: 10px;
+    padding-right: 20px;
+  }
+
+  body > div.page-content > p > code {
+    font-size: 0.9em;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+
+  .highlighter-rouge, code {
+    font-size: 0.9em;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  </style>
+</head>
+
+
+  <body>
+
+    <header class="navigation" role="banner">
+  <div class="navigation-wrapper">
+      <a href="">
+        <span>Ruby is in my blood</span>
+      </a>
+    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+    	<i class="fa fa-bars"></i>
+    </a>
+    
+  </div>
+</header>
+
+
+    <div class="page-content">
+        <h2 id="did-you-say-heredoc-">Did You Say HEREDOC ?</h2>
+
+<p>The purpose of this code snippet is to play (by using simple examples) with the HEREDOC syntax in Ruby.</p>
+
+<p>An HEREDOC permits to group a multiline string by scoping it using a spicy syntax</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">str</span> <span class="o">=</span> <span class="o">&lt;&lt;-</span><span class="no">EOF</span><span class="sh">
+Leonardo: I'm the master of the world !
+Me: No you're dead bro..
+</span><span class="no">EOF</span>
+</code></pre>
+</div>
+
+<p>By default, an HEREDOC enables <code class="highlighter-rouge">String</code> interpolation (as double-quoted string)</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">venue</span> <span class="o">=</span> <span class="s2">"world"</span>
+
+<span class="n">str</span> <span class="o">=</span> <span class="o">&lt;&lt;-</span><span class="no">EOF</span><span class="sh">
+Leonardo: I am the master of the </span><span class="si">#{</span><span class="n">venue</span><span class="si">}</span><span class="sh"> !</span><span class="se">\n</span><span class="sh">
+Me: No you are dead bro..
+</span><span class="no">EOF</span>
+
+<span class="nb">puts</span> <span class="n">str</span>
+</code></pre>
+</div>
+
+<p>Output:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">?&gt; </span>ruby heredoc.rb
+Leonardo: I am the master of the world !
+
+Me: No you are dead bro..
+<span class="gp">?&gt; </span>
+</code></pre>
+</div>
+
+<p>To disable interpolation (as single-quoted string)</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">venue</span> <span class="o">=</span> <span class="s2">"world"</span>
+
+<span class="n">str</span> <span class="o">=</span> <span class="o">&lt;&lt;-</span><span class="no">'EOF'</span><span class="sh">
+Leonardo: I am the master of the </span><span class="si">#{</span><span class="n">venue</span><span class="si">}</span><span class="sh"> !</span><span class="se">\n</span><span class="sh">
+Me: No you are dead bro..
+</span><span class="no">EOF</span>
+
+<span class="nb">puts</span> <span class="n">str</span>
+</code></pre>
+</div>
+
+<p>Output:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">?&gt; </span>ruby heredoc.rb
+Leonardo: I am the master of the <span class="c">#{venue} !\n</span>
+Me: No you are dead bro..
+<span class="gp">?&gt; </span>
+</code></pre>
+</div>
+
+<p>Some text editors understand heredocs and pretty print the string depending on the heredoc flag.<br /><br />
+List of common heredoc flags: «-SQL, «-HTML, «-XML, «-JSON</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="o">&lt;&lt;-</span><span class="no">SQL</span><span class="sh">
+SELECT id
+FROM table
+WHERE
+clause1 AND
+clause2
+ORDER BY
+id DESC;
+</span><span class="no">SQL</span>
+</code></pre>
+</div>
+
+<p>for further information: <a href="http://makandracards.com/makandra/1675-using-heredoc-for-prettier-ruby-code">Using heredoc for prettier Ruby code</a></p>
+
+<p>Voilà !</p>
+
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h3 class="footer-heading">Ruby is in my blood</h3>
+
+    <div class="site-navigation">
+    	
+    	<p><strong>Site Map</strong></p>
+      <ul class="pages">
+        
+        
+          <li class="nav-link"><a href="about/">About</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          <li class="nav-link"><a href="posts/">Posts</a>
+        
+        
+        
+          <li class="nav-link"><a href="typography/">Typography</a>
+        
+        
+      </ul>
+    </div>
+
+    <div class="site-contact">
+
+    	<p><strong>Contact</strong>
+      <ul class="social-media-list">
+      	<li>
+      		<a href="mailto:mehdifarsi.pro@gmail.com">
+	      		<i class="fa fa-envelope-o"></i>
+	      		<span class="username">mehdifarsi.pro@gmail.com</span>
+      		</a>
+      	</li>
+
+      	
+      	
+      	<li>
+          <a href="https://twitter.com/farsi_mehdi" title="Follow me on Twitter">
+            <i class="fa fa-twitter"></i>
+            <span class="username">@farsi_mehdi</span>
+          </a>
+        </li>
+      	
+      	
+      	
+      	<li>
+          <a href="https://github.com/mehdi-farsi" title="Fork me on GitHub">
+            <i class="fa fa-github"></i>
+            <span class="username">mehdi-farsi</span>
+          </a>
+        </li>
+      	
+      	
+      	
+      	<li>
+          <a href="https://www.linkedin.com/pub/mehdi-farsi/48/ba9/336" title="Connect with me on LinkedIn">
+            <i class="fa fa-linkedin"></i>
+            <span class="username">Mehdi FARSI</span>
+          </a>
+        </li>
+      	
+      	
+
+      </ul>
+    </div>
+
+    <div class="site-signature">
+    	<p class="rss-subscribe text"><strong>Subscribe <a href="feed.xml">via RSS</a></strong></p>
+      <p class="text">3.meals.per_day + 8.upto(10).hours.of?(Ruby).per_day  == :life_is_beautiful
+</p>
+    </div>
+
+  </div>
+
+</footer>
+
+<!-- Scripts -->
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+<script>
+
+$(document).ready(function() {
+
+	// Syntax highlighting
+	hljs.initHighlightingOnLoad();
+
+	// Header
+  var menuToggle = $('#js-mobile-menu').unbind();
+  $('#js-navigation-menu').removeClass("show");
+  menuToggle.on('click', function(e) {
+    e.preventDefault();
+    $('#js-navigation-menu').slideToggle(function(){
+      if($('#js-navigation-menu').is(':hidden')) {
+        $('#js-navigation-menu').removeAttr('style');
+      }
+    });
+  });
+
+
+});
+
+</script>
+
+
+
+
+  </body>
+
+</html>

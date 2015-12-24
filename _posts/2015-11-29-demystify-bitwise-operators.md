@@ -34,4 +34,3 @@ This is helpful for displaying the result of the bitwise operations in base 2.
 ```
 
 I'm pretty sure that after few minutes and a little headache, this will be pretty obvious for you !
-</center>

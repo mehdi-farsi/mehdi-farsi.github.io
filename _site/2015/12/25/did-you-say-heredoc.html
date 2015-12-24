@@ -43,15 +43,16 @@
   p, h1, h2, h3, h4, h5 {
     padding-left: 20px;
   }
-  div,pre, pre code {
-    padding-left: 10px;
-    padding-right: 20px;
+
+  .site-header-container {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
-  body > div.page-content > p > code {
+  body > div.page-content > p {
     font-size: 0.9em;
-    padding-right: 5px;
-    padding-left: 5px;
+    padding-right: 10px;
+    padding-left: 20px;
   }
 
   .highlighter-rouge, code {
@@ -62,95 +63,80 @@
   </style>
 </head>
 
-
+<style type="text/css">
+p {margin-left: 5%; width: 87.5%; font-size: 1.4em;}
+.highlight  { background: #ffffcc; margin-left: 5%; width: 87.5%; }
+  
+</style>
   <body>
 
     <header class="navigation" role="banner">
   <div class="navigation-wrapper">
-      <a href="">
-        <span>Ruby is in my blood</span>
-      </a>
-    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
-    	<i class="fa fa-bars"></i>
-    </a>
-    
   </div>
 </header>
 
 
     <div class="page-content">
-        <h2 id="did-you-say-heredoc-">Did You Say HEREDOC ?</h2>
+        <h2>Did You Say HEREDOC ?</h2>
 
 <p>The purpose of this code snippet is to play (by using simple examples) with the HEREDOC syntax in Ruby.</p>
 
 <p>An HEREDOC permits to group a multiline string by scoping it using a spicy syntax</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">str</span> <span class="o">=</span> <span class="o">&lt;&lt;-</span><span class="no">EOF</span><span class="sh">
-Leonardo: I'm the master of the world !
-Me: No you're dead bro..
-</span><span class="no">EOF</span>
-</code></pre>
-</div>
+<p>str = &lt;&lt;-EOF
+Leonardo: I am the master of the world !
+Me: No! you are dead bro..
+EOF</p>
 
-<p>By default, an HEREDOC enables <code class="highlighter-rouge">String</code> interpolation (as double-quoted string)</p>
+<p>By default, an HEREDOC enables <code>String</code> interpolation (as double-quoted string)</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">venue</span> <span class="o">=</span> <span class="s2">"world"</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">venue</span> <span class="o">=</span> <span class="s2">&quot;world&quot;</span>
 
-<span class="n">str</span> <span class="o">=</span> <span class="o">&lt;&lt;-</span><span class="no">EOF</span><span class="sh">
-Leonardo: I am the master of the </span><span class="si">#{</span><span class="n">venue</span><span class="si">}</span><span class="sh"> !</span><span class="se">\n</span><span class="sh">
-Me: No you are dead bro..
-</span><span class="no">EOF</span>
+<span class="n">str</span> <span class="o">=</span> <span class="o">&lt;&lt;-</span><span class="no">EOF</span>
+<span class="sh">Leonardo: I am the master of the #{venue} !\n</span>
+<span class="sh">Me: No! you are dead bro..</span>
+<span class="no">EOF</span>
 
-<span class="nb">puts</span> <span class="n">str</span>
-</code></pre>
-</div>
+<span class="nb">puts</span> <span class="n">str</span></code></pre></div>
 
 <p>Output:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">?&gt; </span>ruby heredoc.rb
-Leonardo: I am the master of the world !
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="sc">?&gt;</span> <span class="n">ruby</span> <span class="n">heredoc</span><span class="o">.</span><span class="n">rb</span>
+<span class="ss">Leonardo</span><span class="p">:</span> <span class="n">I</span> <span class="n">am</span> <span class="n">the</span> <span class="n">master</span> <span class="n">of</span> <span class="n">the</span> <span class="n">world</span> <span class="o">!</span>
 
-Me: No you are dead bro..
-<span class="gp">?&gt; </span>
-</code></pre>
-</div>
+<span class="ss">Me</span><span class="p">:</span> <span class="no">No</span><span class="o">!</span> <span class="n">you</span> <span class="n">are</span> <span class="n">dead</span> <span class="n">bro</span><span class="o">.</span><span class="n">.</span>
+<span class="sc">?&gt;</span></code></pre></div>
 
 <p>To disable interpolation (as single-quoted string)</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">venue</span> <span class="o">=</span> <span class="s2">"world"</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">venue</span> <span class="o">=</span> <span class="s2">&quot;world&quot;</span>
 
-<span class="n">str</span> <span class="o">=</span> <span class="o">&lt;&lt;-</span><span class="no">'EOF'</span><span class="sh">
-Leonardo: I am the master of the </span><span class="si">#{</span><span class="n">venue</span><span class="si">}</span><span class="sh"> !</span><span class="se">\n</span><span class="sh">
-Me: No you are dead bro..
-</span><span class="no">EOF</span>
+<span class="n">str</span> <span class="o">=</span> <span class="o">&lt;&lt;-</span><span class="sh">&#39;</span><span class="no">EOF</span><span class="sh">&#39;</span>
+<span class="sh">Leonardo: I am the master of the #{venue} !\n</span>
+<span class="sh">Me: No! you are dead bro..</span>
+<span class="no">EOF</span>
 
-<span class="nb">puts</span> <span class="n">str</span>
-</code></pre>
-</div>
+<span class="nb">puts</span> <span class="n">str</span></code></pre></div>
 
 <p>Output:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="gp">?&gt; </span>ruby heredoc.rb
-Leonardo: I am the master of the <span class="c">#{venue} !\n</span>
-Me: No you are dead bro..
-<span class="gp">?&gt; </span>
-</code></pre>
-</div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="sc">?&gt;</span> <span class="n">ruby</span> <span class="n">heredoc</span><span class="o">.</span><span class="n">rb</span>
+<span class="ss">Leonardo</span><span class="p">:</span> <span class="n">I</span> <span class="n">am</span> <span class="n">the</span> <span class="n">master</span> <span class="n">of</span> <span class="n">the</span> <span class="c1">#{venue} !\n</span>
+<span class="ss">Me</span><span class="p">:</span> <span class="no">No</span><span class="o">!</span> <span class="n">you</span> <span class="n">are</span> <span class="n">dead</span> <span class="n">bro</span><span class="o">.</span><span class="n">.</span>
+<span class="sc">?&gt;</span></code></pre></div>
 
-<p>Some text editors understand heredocs and pretty print the string depending on the heredoc flag.<br /><br />
-List of common heredoc flags: «-SQL, «-HTML, «-XML, «-JSON</p>
+<p>Some text editors understand heredocs and pretty print the string depending on the heredoc flag.<br />
+List of common heredoc flags: &lt;&lt;-SQL, &lt;&lt;-HTML, &lt;&lt;-XML, &lt;&lt;-JSON</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="o">&lt;&lt;-</span><span class="no">SQL</span><span class="sh">
-SELECT id
-FROM table
-WHERE
-clause1 AND
-clause2
-ORDER BY
-id DESC;
-</span><span class="no">SQL</span>
-</code></pre>
-</div>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="o">&lt;&lt;-</span><span class="no">SQL</span>
+<span class="sh">SELECT id</span>
+<span class="sh">FROM table</span>
+<span class="sh">WHERE</span>
+<span class="sh">clause1 AND</span>
+<span class="sh">clause2</span>
+<span class="sh">ORDER BY</span>
+<span class="sh">id DESC;</span>
+<span class="no">SQL</span></code></pre></div>
 
 <p>for further information: <a href="http://makandracards.com/makandra/1675-using-heredoc-for-prettier-ruby-code">Using heredoc for prettier Ruby code</a></p>
 

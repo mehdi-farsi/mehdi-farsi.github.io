@@ -63,95 +63,73 @@
   </style>
 </head>
 
-
+<style type="text/css">
+p {margin-left: 5%; width: 87.5%; font-size: 1.4em;}
+.highlight  { background: #ffffcc; margin-left: 5%; width: 87.5%; }
+  
+</style>
   <body>
 
     <header class="navigation" role="banner">
-<<<<<<< Updated upstream
-=======
   <div class="navigation-wrapper">
-      <a href="">
-        <span>Ruby is in my blood</span>
-      </a>
->>>>>>> Stashed changes
-    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
-    	<i class="fa fa-bars"></i>
-    </a>
+  </div>
 </header>
 
 
     <div class="page-content">
-        <h1 id="case-statement-behind-the-scene">Case statement Behind The Scene</h1>
+        <h1>Case statement Behind The Scene</h1>
 
-<h3 id="syntax">Syntax</h3>
+<h3>Syntax</h3>
 
-<p>A <code class="highlighter-rouge">case</code> statement consists of an optional condition followed by zero or more <code class="highlighter-rouge">when</code> conditions.<br />
-It returns the value of the first truthy <code class="highlighter-rouge">when</code> statement. Otherwise <code class="highlighter-rouge">nil</code>.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">str</span> <span class="o">=</span> <span class="k">case</span> <span class="s2">"match"</span>
-<span class="k">when</span> <span class="s2">"match"</span> <span class="k">then</span> <span class="s2">"I match !"</span>
+<p>A <code>case</code> statement consists of an optional condition followed by zero or more <code>when</code> conditions.
+It returns the value of the first truthy <code>when</code> statement. Otherwise <code>nil</code>.</p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">str</span> <span class="o">=</span> <span class="k">case</span> <span class="s2">&quot;match&quot;</span>
+<span class="k">when</span> <span class="s2">&quot;match&quot;</span> <span class="k">then</span> <span class="s2">&quot;I match !&quot;</span>
 <span class="k">end</span>
 
-<span class="c1"># =&gt; str = "I match !"</span>
-</code></pre>
-</div>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="n">str</span> <span class="o">=</span> <span class="k">case</span> <span class="s2">"lolcat"</span>
-<span class="k">when</span> <span class="s2">"not match"</span> <span class="k">then</span> <span class="s2">"lolcat"</span>
+<span class="c1"># =&gt; str = &quot;I match !&quot;</span>
+</code></pre></div><div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">str</span> <span class="o">=</span> <span class="k">case</span> <span class="s2">&quot;lolcat&quot;</span>
+<span class="k">when</span> <span class="s2">&quot;not match&quot;</span> <span class="k">then</span> <span class="s2">&quot;lolcat&quot;</span>
 <span class="k">end</span>
 
 <span class="c1"># =&gt; str = nil</span>
-</code></pre>
-</div>
+</code></pre></div>
+<h3>Determine case equality</h3>
 
-<h3 id="determine-case-equality">Determine case equality</h3>
-
-<p>Case equality is determined by the <code class="highlighter-rouge">===</code> (threequal) operator.<br />
-The left operand is always the statement of the <code class="highlighter-rouge">when</code> clause.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">case</span> <span class="s2">"lolcat"</span>
-<span class="k">when</span> <span class="no">String</span> <span class="k">then</span> <span class="s2">"I'm a String"</span>
-<span class="k">when</span> <span class="no">Fixnum</span> <span class="k">then</span> <span class="s2">"I'm a Fixnum"</span>
-<span class="k">when</span> <span class="no">Range</span>  <span class="k">then</span> <span class="s2">"I'm a Range"</span>
+<p>Case equality is determined by the <code>===</code> (threequal) operator.
+The left operand is always the statement of the <code>when</code> clause.</p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">case</span> <span class="s2">&quot;lolcat&quot;</span>
+<span class="k">when</span> <span class="nb">String</span> <span class="k">then</span> <span class="s2">&quot;I&#39;m a String&quot;</span>
+<span class="k">when</span> <span class="no">Fixnum</span> <span class="k">then</span> <span class="s2">&quot;I&#39;m a Fixnum&quot;</span>
+<span class="k">when</span> <span class="no">Range</span>  <span class="k">then</span> <span class="s2">&quot;I&#39;m a Range&quot;</span>
 <span class="k">end</span>
-</code></pre>
-</div>
-
+</code></pre></div>
 <p>Equivalent to:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">if</span> <span class="no">String</span> <span class="o">===</span> <span class="s2">"lolcat"</span>
-  <span class="s2">"I'm a String"</span>
-<span class="k">elsif</span> <span class="no">Fixnum</span> <span class="o">===</span> <span class="s2">"lolcat"</span>
-  <span class="s2">"I'm a Fixnum"</span>
-<span class="k">elsif</span> <span class="no">Range</span> <span class="o">===</span> <span class="s2">"lolcat"</span>
-  <span class="s2">"I'm a Range"</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">if</span> <span class="nb">String</span> <span class="o">===</span> <span class="s2">&quot;lolcat&quot;</span>
+  <span class="s2">&quot;I&#39;m a String&quot;</span>
+<span class="k">elsif</span> <span class="no">Fixnum</span> <span class="o">===</span> <span class="s2">&quot;lolcat&quot;</span>
+  <span class="s2">&quot;I&#39;m a Fixnum&quot;</span>
+<span class="k">elsif</span> <span class="no">Range</span> <span class="o">===</span> <span class="s2">&quot;lolcat&quot;</span>
+  <span class="s2">&quot;I&#39;m a Range&quot;</span>
 <span class="k">end</span>
-</code></pre>
-</div>
+</code></pre></div>
+<h3>Multiple statements</h3>
 
-<h3 id="multiple-statements">Multiple statements</h3>
-
-<p>The <code class="highlighter-rouge">when</code> clause accepts multiple statements.</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">case</span> <span class="s2">"lolcat"</span>
-<span class="k">when</span> <span class="no">String</span><span class="p">,</span> <span class="s2">"I'm a string"</span> <span class="k">then</span> <span class="kp">true</span>
+<p>The <code>when</code> clause accepts multiple statements.</p>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">case</span> <span class="s2">&quot;lolcat&quot;</span>
+<span class="k">when</span> <span class="nb">String</span><span class="p">,</span> <span class="s2">&quot;I&#39;m a string&quot;</span> <span class="k">then</span> <span class="kp">true</span>
 <span class="k">end</span>
-</code></pre>
-</div>
-
+</code></pre></div>
 <p>Equivalent to:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">if</span> <span class="no">String</span> <span class="o">===</span> <span class="s2">"lolcat"</span> <span class="n">or</span> <span class="s2">"I'm a string"</span> <span class="o">===</span> <span class="s2">"lolcat"</span>
+<div class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">if</span> <span class="nb">String</span> <span class="o">===</span> <span class="s2">&quot;lolcat&quot;</span> <span class="ow">or</span> <span class="s2">&quot;I&#39;m a string&quot;</span> <span class="o">===</span> <span class="s2">&quot;lolcat&quot;</span>
   <span class="kp">true</span>
 <span class="k">end</span>
-</code></pre>
-</div>
-
-<p>Each statement is separated by an <code class="highlighter-rouge">or</code> operator.</p>
+</code></pre></div>
+<p>Each statement is separated by an <code>or</code> operator.</p>
 
 <p>Voilà !</p>
 
-<h5 id="related-links">Related Links</h5>
+<h5>Related Links</h5>
 
 <p><a href="http://ruby-doc.org/docs/keywords/1.9/Object.html#method-i-case">http://ruby-doc.org/docs/keywords/1.9/Object.html#method-i-case</a></p>
 
